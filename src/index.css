@@ -16,4 +16,15 @@
   .container{
     @apply px-2 md:px-0
   }
+ form {
+   @apply grid-cols-1 grid gap-2
+ }
+  form label{
+    @apply text-2xl mb-2 font-bold
+
+  }
+  form input, textarea{
+    @apply bg-transparent border border-neutral-800 p-2 rounded-md
+  }
+
 }
