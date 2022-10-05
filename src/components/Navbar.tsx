@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import {
   ArrowLeftOnRectangleIcon,
   ArrowRightOnRectangleIcon,
-  BookOpenIcon,
+  CommandLineIcon,
   PencilIcon,
 } from "@heroicons/react/24/outline";
 
@@ -20,7 +20,7 @@ const Navbar = () => {
     navigate("/create-post");
   };
   const postsNavigate = () => {
-    navigate("/posts");
+    navigate("/projects");
   };
   return (
     <nav className="bg-neutral-900">
@@ -42,8 +42,8 @@ const Navbar = () => {
                 onClick={postsNavigate}
                 className="flex items-center justify-center gap-2 p-2 rounded-md border border-neutral-800 hover:bg-neutral-800 duration-300 cursor-pointer text-xl "
               >
-                <BookOpenIcon className="w-8" />
-                Posts
+                <CommandLineIcon className="w-8" />
+                Projects
               </button>
               <button
                 onClick={createPostNavigate}
