@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { CreatePost, Home, Login } from "./pages/index";
+import { CreatePost, Home, Login, Posts } from "./pages/index";
 import { Navbar } from "./components/index";
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/posts" element={<Posts />} />
       </Routes>
     </div>
   );

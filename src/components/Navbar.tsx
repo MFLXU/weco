@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import {
   ArrowLeftOnRectangleIcon,
   ArrowRightOnRectangleIcon,
+  BookOpenIcon,
   PencilIcon,
 } from "@heroicons/react/24/outline";
 
@@ -17,6 +18,9 @@ const Navbar = () => {
   const navigate = useNavigate();
   const createPostNavigate = () => {
     navigate("/create-post");
+  };
+  const postsNavigate = () => {
+    navigate("/posts");
   };
   return (
     <nav className="bg-neutral-900">
@@ -35,11 +39,19 @@ const Navbar = () => {
                 <p className="text-xl">{auth.currentUser?.displayName}</p>
               </div>
               <button
+                onClick={postsNavigate}
+                className="flex items-center justify-center gap-2 p-2 rounded-md border border-neutral-800 hover:bg-neutral-800 duration-300 cursor-pointer text-xl "
+              >
+                <BookOpenIcon className="w-8" />
+                Posts
+              </button>
+              <button
                 onClick={createPostNavigate}
                 className="flex items-center justify-center gap-2 p-2 rounded-md border border-neutral-800 hover:bg-neutral-800 duration-300 cursor-pointer"
               >
                 <PencilIcon className="w-8" />
               </button>
+
               <button
                 className="flex items-center justify-center gap-2 p-2 rounded-md border border-neutral-800 hover:bg-neutral-800 duration-300 cursor-pointer"
                 onClick={signUserOut}

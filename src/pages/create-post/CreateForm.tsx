@@ -4,6 +4,8 @@ const CreateForm = () => {
   const schema = yup.object().shape({
     title: yup.string().required("You must add a title"),
     description: yup.string().required("You must add a title"),
+    github: yup.string().required("You must add your github"),
+    mail: yup.string().required("You must add your email"),
   });
   return (
     <form>
