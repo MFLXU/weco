@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { CreatePost, Home, Login, Projects } from "./pages/index";
 import { Navbar } from "./components/index";
-function App() {
+
+export function App() {
   return (
     <div className="">
       <Navbar />
