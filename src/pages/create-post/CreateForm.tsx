@@ -73,8 +73,8 @@ const CreateForm = () => {
           <p
             className={
               desc < 400
-                ? "absolute right-4 bottom-4"
-                : "absolute right-4 bottom-4 text-red-600"
+                ? "absolute right-4 bottom-4 bg-neutral-800 p-1 rounded-md"
+                : "absolute right-4 bottom-4 bg-neutral-800 p-1 rounded-md text-red-600"
             }
           >
             {desc}/400

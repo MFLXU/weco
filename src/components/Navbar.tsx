@@ -14,6 +14,7 @@ const Navbar = () => {
   const [user] = useAuthState(auth);
   const signUserOut = async () => {
     await signOut(auth);
+    navigate("/");
   };
   const navigate = useNavigate();
   const createPostNavigate = () => {
