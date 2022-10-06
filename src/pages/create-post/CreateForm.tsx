@@ -5,7 +5,7 @@ import * as yup from "yup";
 import { auth, db } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
+import { ExclamationCircleIcon, PlusIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 interface CreateFormData {
   title: string;
@@ -85,6 +85,7 @@ const CreateForm = () => {
         <input
           className="bg-neutral-800 hover:-translate-y-1 border border-neutral-900 duration-300 text-xl rounded-md px-8 cursor-pointer py-2 mt-2"
           type="submit"
+          value="Post your project"
         />
       </form>
     </>
