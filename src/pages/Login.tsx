@@ -6,7 +6,7 @@ const Login = () => {
   const signInWithGoogle = async () => {
     const result = await signInWithPopup(auth, provider);
     console.log(result);
-    navigate("/");
+    navigate("/projects");
   };
 
   return (
@@ -35,7 +35,7 @@ const Login = () => {
             </a>
           </p>
           <button
-            className="cursor-pointer bg-neutral-800 hover:-translate-y-1 border border-neutral-900 duration-300 text-xl rounded-md px-8 py-2 mt-10"
+            className="cursor-pointer bg-neutral-800 border hover:border-orange-500 hover:-translate-y-1 border border-neutral-900 duration-300 text-xl rounded-md px-8 py-2 mt-10"
             onClick={signInWithGoogle}
           >
             log in with Google

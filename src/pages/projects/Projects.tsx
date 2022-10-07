@@ -24,18 +24,28 @@ const Projects = () => {
   };
   useEffect(() => {
     getPosts();
-  }, []);
+  }, [postsList]);
   return (
-    <div>
+    <div className="pb-10">
       <div className="container">
         <div className="">
           <h1 className="my-20 text-5xl text-center">
-            Find a project, and leave your mark ✨{" "}
+            find a{" "}
+            <span className="text-orange-500 font-extrabold">project</span>, and
+            leave your{" "}
+            <span className="text-orange-500 font-extrabold">mark</span> ✨{" "}
           </h1>
           <div className="grid grid-cols-1 gap-8">
-            {postsList?.map((post) => (
-              <ProjectPost post={post} />
-            ))}
+            {postsList == null ? (
+              <p className="text-3xl text-orange-500 text-center font-extrabold">
+                Loading
+              </p>
+            ) : (
+              postsList
+                ?.slice(0)
+                .reverse()
+                .map((post) => <ProjectPost post={post} />)
+            )}
           </div>
         </div>
       </div>
