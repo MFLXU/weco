@@ -13,7 +13,7 @@ const CreatePost = () => {
               for the description write a small overview of the project and the
               main goal, and whats left to be done.
             </p>
-            <p className="mt-8">enjoy.</p>
+            <p className="mt-8 text-orange-500">enjoy.</p>
           </div>
           <CreateForm />
         </div>

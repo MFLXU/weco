@@ -10,9 +10,7 @@
   margin: auto;
 }
 @layer base {
-  body{
-    @apply bg-neutral-900 text-white
-  }
+
   .container{
     @apply px-2 md:px-0
   }

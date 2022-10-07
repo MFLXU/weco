@@ -1,10 +1,38 @@
-import Notice from "./Notice";
+import { useNavigate } from "react-router-dom";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <section>
       <div className="container">
-        <Notice />{" "}
+        <div className=" h-[80vh] flex items-center justify-center flex-col">
+          <h1 className="text-6xl font-extrabold text-center">
+            the best place to find{" "}
+            <span className="text-orange-500">open-source</span> project.
+          </h1>
+          <p className="text-xl mt-4">
+            brows open-source project, or post your own.
+          </p>
+          <div className="grid grid-cols-2 gap-2">
+            <a
+              href="https://github.com/MFLXU"
+              target="_blank"
+              className="mt-20 flex gap-2 items-center justify-center hover:border-orange-500 border border-neutral-900 text-2xl font-bold py-2 px-8 rounded-md bg-neutral-800 duration-300"
+            >
+              github
+              <ArrowTopRightOnSquareIcon className="w-6" />
+            </a>
+            <button
+              onClick={() => {
+                navigate("/login");
+              }}
+              className="mt-20 bg-orange-500 text-black text-2xl font-bold py-2 px-8 rounded-md hover:bg-orange-400 duration-300"
+            >
+              get started
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
