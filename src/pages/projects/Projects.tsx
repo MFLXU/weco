@@ -29,7 +29,7 @@ const Projects = () => {
     <div className="pb-10">
       <div className="container">
         <div className="">
-          <h1 className="my-20 text-5xl text-center">
+          <h1 className="md:my-20 my-10 text-5xl text-center">
             find a{" "}
             <span className="text-orange-500 font-extrabold">project</span>, and
             leave your{" "}

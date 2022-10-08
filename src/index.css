@@ -10,9 +10,11 @@
   margin: auto;
 }
 @layer base {
-
+    body{
+      @apply  bg-neutral-900 text-white
+    }
   .container{
-    @apply px-2 md:px-0
+    @apply px-4 md:px-0
   }
  form {
    @apply grid-cols-1 grid gap-2

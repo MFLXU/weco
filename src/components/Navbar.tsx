@@ -8,6 +8,7 @@ import {
   ArrowRightOnRectangleIcon,
   CommandLineIcon,
   PencilIcon,
+  Bars4Icon,
 } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
@@ -33,11 +34,11 @@ const Navbar = () => {
 
           {user ? (
             <div className="flex items-center justify-center gap-2">
-              <div className="flex items-center border border-orange-500 justify-center gap-2 p-2 rounded-md hover:bg-neutral-800 duration-300 cursor-default">
+              <div className="hidden md:flex items-center border border-orange-500 justify-center gap-2 p-2 rounded-md hover:bg-neutral-800 duration-300 cursor-default">
                 <div className="rounded-md overflow-hidden w-7">
                   <img src={auth.currentUser?.photoURL || ""} alt="" />
                 </div>
-                <p className="text-xl">{auth.currentUser?.displayName}</p>
+                <p className="text-xl ">{auth.currentUser?.displayName}</p>
               </div>
               <button
                 onClick={postsNavigate}
@@ -60,12 +61,14 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <Link
-              className="flex items-center justify-center gap-2 p-2 rounded-md border border-neutral-800 hover:bg-neutral-800 duration-300 cursor-pointer hover:border-orange-500"
-              to="/login"
-            >
-              <ArrowLeftOnRectangleIcon className="w-8" />
-            </Link>
+            <div className="flex items-center justify-center gap-2">
+              <Link
+                className="flex items-center justify-center gap-2 p-2 rounded-md border border-neutral-800 hover:bg-neutral-800 duration-300 cursor-pointer hover:border-orange-500"
+                to="/login"
+              >
+                <ArrowLeftOnRectangleIcon className="w-8" />
+              </Link>
+            </div>
           )}
         </div>
       </div>

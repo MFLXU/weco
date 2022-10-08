@@ -2,7 +2,7 @@ import CreateForm from "./CreateForm";
 
 const CreatePost = () => {
   return (
-    <section className="mt-20">
+    <section className="md:mt-20 mt-10 pb-10">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-neutral-800 p-4 rounded-md text-xl border border-orange-500">
