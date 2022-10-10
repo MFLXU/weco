@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { About, CreatePost, Home, Login, Projects } from "./pages/index";
 import { Navbar } from "./components/index";
 export function App() {
+  console.log(process.env.REACT_APP_API_KEY);
   return (
     <div>
       <Navbar />
