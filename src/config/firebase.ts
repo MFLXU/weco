@@ -2,9 +2,8 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-
 const firebaseConfig = {
-  apiKey: "AIzaSyCZeSmD-QMLi63zDwk6HvRHlbpZuryq9XI",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "weco-42a6b.firebaseapp.com",
   projectId: "weco-42a6b",
   storageBucket: "weco-42a6b.appspot.com",
