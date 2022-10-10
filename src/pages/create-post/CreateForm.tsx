@@ -11,6 +11,7 @@ interface CreateFormData {
   title: string;
   description: string;
   githubrepo: string;
+  ptype: string;
 }
 const CreateForm = () => {
   const navigate = useNavigate();
@@ -21,12 +22,13 @@ const CreateForm = () => {
     setDesc(e.target.value.length);
   };
   const schema = yup.object().shape({
-    title: yup.string().max(50).required("You must add a title!"),
+    title: yup.string().max(40).required("You must add a title!"),
     description: yup.string().max(600).required("You must add a description!"),
     githubrepo: yup
       .string()
       .url()
       .required("You must add the github repo link!"),
+    ptype: yup.string().max(40).required("You must add a project type!"),
   });
   const {
     register,
@@ -56,14 +58,20 @@ const CreateForm = () => {
         </div>
       ) : null}
       <form onSubmit={handleSubmit(onCreatePost)}>
-        <label>repo title :</label>
+        <label>Repo Title :</label>
         <input placeholder="title..." {...register("title")} />
         <p className="text-red-600">{errors.title?.message}</p>
-        <label>github repo :</label>
+        <label>Github Repo :</label>
         <input placeholder="github repo..." {...register("githubrepo")} />
         <p className="text-red-600">{errors.githubrepo?.message}</p>
+        <label>Project Type :</label>
+        <input
+          placeholder="Front-End, Back-End, Mobile, Web3..."
+          {...register("ptype")}
+        />
+        <p className="text-red-600">{errors.ptype?.message}</p>
 
-        <label>description :</label>
+        <label>Description :</label>
         <div className="relative w-full">
           <textarea
             className="w-full"
