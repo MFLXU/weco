@@ -9,6 +9,9 @@
   max-width: 1000px;
   margin: auto;
 }
+.bounce{
+    animation: bounce 5s infinite;
+}
 @layer base {
     body{
       @apply  bg-neutral-900 text-white
@@ -27,4 +30,16 @@
     @apply bg-transparent border border-neutral-800 p-2 rounded-md
   }
 
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(-5%);
+    }
+    50%{
+        transform: translateY(5%);
+    }
+    100%{
+        transform: translateY(-5%);
+    }
 }

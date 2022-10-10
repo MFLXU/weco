@@ -4,12 +4,12 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "API KEY",
-  authDomain: "AUTH DOMAIN",
-  projectId: "PROJECT ID",
-  storageBucket: "wSTORAGE BUCKET",
-  messagingSenderId: "MESSAGING SENDER ID",
-  appId: "APP ID",
+  apiKey: "AIzaSyCZeSmD-QMLi63zDwk6HvRHlbpZuryq9XI",
+  authDomain: "weco-42a6b.firebaseapp.com",
+  projectId: "weco-42a6b",
+  storageBucket: "weco-42a6b.appspot.com",
+  messagingSenderId: "156929777373",
+  appId: "1:156929777373:web:83a2cfa486f01fef858534",
 };
 
 const app = initializeApp(firebaseConfig);
