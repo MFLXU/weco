@@ -1,10 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import { About, CreatePost, Home, Login, Projects } from "./pages/index";
 import { Navbar } from "./components/index";
+import Notice from "./pages/home/Notice";
+import { useState } from "react";
+
 export function App() {
-  console.log(process.env.REACT_APP_API_KEY);
+  const [notice, setNotice] = useState(false);
+  const noticeHandler = () => {
+    setTimeout(() => {
+      setNotice(true);
+    }, 3000);
+  };
+  noticeHandler();
   return (
     <div>
+      {notice ? <Notice /> : null}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

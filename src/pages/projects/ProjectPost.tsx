@@ -68,9 +68,13 @@ const ProjectPost = (props: Props) => {
         </div>
 
         <div className="p-4">
-          <h3 className="text-4xl font-extrabold mb-2">
+          <h3 className="text-4xl font-extrabold mb-2 flex md:flex-row flex-col justify-start items-center gap-2">
             {post.title.toLowerCase()}
+            <p className="bg-orange-500 text-lg px-2 py-1 my-2 rounded-md w-fit">
+              {post.ptype}
+            </p>
           </h3>
+
           <p className="text-xl">{post.description.toLowerCase()}</p>
         </div>
       </div>
