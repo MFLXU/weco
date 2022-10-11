@@ -9,10 +9,12 @@ const CreatePost = () => {
             <p>use the github repository title</p>
             <p>make sure that your github repository is public</p>
             <p>post the exact link of the github repository</p>
+            <p>project type should be obvious.</p>
             <p>
               for the description write a small overview of the project and the
               main goal, and whats left to be done.
             </p>
+
             <p className="mt-8 text-orange-500">enjoy.</p>
           </div>
           <CreateForm />
