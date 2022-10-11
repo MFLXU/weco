@@ -3,7 +3,7 @@ const About = () => {
     <section>
       <div className="container">
         <div className="mt-10">
-          <div className="p-4 bg-red-600 rounded-md">
+          <div className="p-4 bg-red-600 rounded-md border border-white border-2">
             <h1 className="text-4xl font-extrabold">
               Why some features don't work?
             </h1>

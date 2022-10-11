@@ -5,7 +5,7 @@ const Notice = () => {
   return (
     <div className="bg-red-600 py-2">
       <div className="container">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center text-center">
           <p>
             Some features may not work,{" "}
             <span

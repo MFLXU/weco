@@ -31,6 +31,10 @@ const Projects = () => {
     getPosts();
   }, [postsList]);
   const [sort, setSort] = useState(false);
+  const [search, setSearch] = useState("");
+  const searchHandler = (e: any) => {
+    setSearch(e.target.value);
+  };
   return (
     <div className="pb-10">
       <div className="container">
@@ -48,6 +52,9 @@ const Projects = () => {
                 type="text"
                 className="bg-neutral-900 outline-0 text-xl w-full ml-2"
                 placeholder="Front-End, Back-End, Mobile, Web3..."
+                onChange={(e) => {
+                  searchHandler(e);
+                }}
               />
               <MagnifyingGlassIcon className="w-8 ml-auto" />
             </div>
@@ -73,9 +80,28 @@ const Projects = () => {
               postsList
                 ?.slice(0)
                 .reverse()
+                .filter((val) => {
+                  if (search === "") {
+                    return val;
+                  } else if (
+                    val.ptype.toLowerCase().includes(search.toLowerCase())
+                  ) {
+                    return val;
+                  }
+                })
                 .map((post) => <ProjectPost post={post} />)
             ) : (
-              postsList?.map((post) => <ProjectPost post={post} />)
+              postsList
+                ?.filter((val) => {
+                  if (search === "") {
+                    return val;
+                  } else if (
+                    val.ptype.toLowerCase().includes(search.toLowerCase())
+                  ) {
+                    return val;
+                  }
+                })
+                .map((post) => <ProjectPost post={post} />)
             )}
           </div>
         </div>

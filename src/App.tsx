@@ -9,7 +9,7 @@ export function App() {
   const noticeHandler = () => {
     setTimeout(() => {
       setNotice(true);
-    }, 3000);
+    }, 10000);
   };
   noticeHandler();
   return (
