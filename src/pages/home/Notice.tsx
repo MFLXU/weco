@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
-const Notice = () => {
+const Notice = (props: any) => {
   const navigete = useNavigate();
   return (
     <div className="bg-red-600 py-2">
-      <div className="container">
+      <div className="container flex items-center justify-between">
         <div className="flex items-center justify-center text-center">
           <p>
             Some features may not work,{" "}
@@ -19,6 +20,13 @@ const Notice = () => {
             to know why.
           </p>
         </div>
+        <button
+          onClick={() => {
+            props.show(false);
+          }}
+        >
+          <XMarkIcon className="w-6" />{" "}
+        </button>
       </div>
     </div>
   );

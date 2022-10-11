@@ -14,7 +14,7 @@ export function App() {
   noticeHandler();
   return (
     <div>
-      {notice ? <Notice /> : null}
+      {notice ? <Notice show={setNotice} /> : null}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
