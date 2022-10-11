@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { About, CreatePost, Home, Login, Projects } from "./pages/index";
 import { Navbar } from "./components/index";
 import Notice from "./pages/home/Notice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function App() {
   const [notice, setNotice] = useState(false);
@@ -11,7 +11,7 @@ export function App() {
       setNotice(true);
     }, 10000);
   };
-  noticeHandler();
+  useEffect(noticeHandler, []);
   return (
     <div>
       {notice ? <Notice show={setNotice} /> : null}
