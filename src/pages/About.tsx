@@ -1,3 +1,5 @@
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+
 const About = () => {
   return (
     <section>
@@ -27,14 +29,14 @@ const About = () => {
             and styled fully using TailwindCSS, Back-end build using Firebase
             Authentication and Firestore database.
           </p>
-          <p className="text-xl mb-10 mt-40 text-center">
-            give us a star on{" "}
+          <p className="text-xl mb-10 mt-40 text-center flex items-center justify-center gap-4&">
+            give us a ⭐ on{" "}
             <a
-              className="bg-neutral-800 py-2 px-4 rounded-md hover:bg-neutral-700 duration-300 font-extrabold"
+              className=" flex items-center justify-center gap-2 w-fit bg-neutral-800 py-2 px-4 rounded-md hover:bg-neutral-700 duration-300 font-extrabold"
               href="https://github.com/MFLXU/weco"
               target="_blank"
             >
-              Github
+              Github <ArrowTopRightOnSquareIcon className="w-5" />
             </a>
           </p>
         </div>

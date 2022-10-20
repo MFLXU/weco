@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import Features from "./Features";
 const heroImg = require("../../utils/hero-img.png");
 const Home = () => {
   const navigate = useNavigate();
   return (
     <section>
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-8 mt-10 md:mt-40">
+        <div className="grid md:grid-cols-2 gap-8 mt-10 md:mt-20">
           <div>
             <h1 className="md:text-6xl text-5xl font-extrabold md:text-left text-center">
               the best place to find{" "}
@@ -38,6 +39,7 @@ const Home = () => {
             <img src={heroImg} alt="" />
           </div>
         </div>
+        <Features />
       </div>
     </section>
   );

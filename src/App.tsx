@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { About, CreatePost, Home, Login, Projects } from "./pages/index";
-import { Navbar } from "./components/index";
+import { Navbar, Footer } from "./components/index";
 import Notice from "./pages/home/Notice";
 import { useEffect, useState } from "react";
 
